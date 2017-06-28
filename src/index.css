@@ -17,6 +17,7 @@ html, body, #root, .wrapper {
 .container {
   max-width: 960px;
   margin: 0 auto;
+  display: block;
 }
 
 
@@ -57,15 +58,11 @@ html, body, #root, .wrapper {
   color: black;
   transition: color ease-in-out 300ms;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 #navigator.compact a {
   color: white;
-}
-
-#navigator ~ main {
-  margin-top: 64px;
 }
 
 .wrapper {
@@ -87,4 +84,23 @@ footer.footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+
+
+
+
+
+.overview > section {
+  padding: 4rem 1rem 1rem 1rem;
+  height: 100vh;
+}
+
+.overview > section:nth-child(odd) {
+  background-color: #e8e8e8;
+}
+
+.about > section {
+  padding: 4rem 1rem 1rem 1rem;
 }
