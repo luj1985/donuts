@@ -9,6 +9,17 @@ body {
   font-size: 16px;
 }
 
+html, body, #root, .wrapper {
+  height: 100%;
+}
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
 #navigator {
   display: block;
   position: fixed;
@@ -42,21 +53,38 @@ body {
   margin: 1rem;
 }
 
-#navigator ~ main {
-  margin-top: 64px;
-}
-
 #navigator a {
   color: black;
   transition: color ease-in-out 300ms;
   text-decoration: none;
+  padding: 1rem;
 }
 
 #navigator.compact a {
   color: white;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
+#navigator ~ main {
+  margin-top: 64px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper main {
+  flex-grow: 9;
+}
+
+.wrapper footer {
+  flex-shrink: 0;
+}
+
+footer.footer {
+  background-color: #424242;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

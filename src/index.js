@@ -40,14 +40,23 @@ class Navigator extends React.Component {
   }
 }
 
+const Footer = () => (
+  <footer className="footer">
+    <div className="container">
+    this is footer
+    </div>
+  </footer>
+)
+
 const App = () => (
   <Router>
-    <div>
+    <div className="wrapper">
       <Navigator />
       <main>
         <Route exact path="/" component={Overview}/>
         <Route path="/about" component={About}/>
       </main>
+      <Footer />
     </div>
   </Router>
 )
